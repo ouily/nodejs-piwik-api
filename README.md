@@ -5,8 +5,20 @@ Ce module permet de se connecter facilement à une API Piwik. Il est conçu pour
 
 ## Install
 
-```npm install piwik-api```
+    npm install piwik-api
 
-## Examples:
+## Setup
 
-Prochainement disponible.
+    var PiwikAPI = require("piwik-api");
+
+    PiwikAPI.configure({
+	    host: "demo.piwik.org",
+      path: "/",
+	    defaultToken: "anonymous",
+    });
+    
+## Usage
+
+    PiwikAPI.get({method: "SitesManager.getSiteFromId", format: "json"}, {idSite: "7"},function(message) {
+	    console.log(message);
+    });
