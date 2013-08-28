@@ -19,6 +19,6 @@ Ce module permet de se connecter facilement à une API Piwik. Il est conçu pour
     
 ## Usage
 
-    PiwikAPI.get({method: "SitesManager.getSiteFromId", format: "json"}, {idSite: "7"},function(message) {
+    PiwikAPI.get({method: "SitesManager.getSiteFromId"}, {idSite: "7"},function(message) {
 	    console.log(message);
     });
