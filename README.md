@@ -13,6 +13,7 @@ Ce module permet de se connecter facilement à une API Piwik. Il est conçu pour
 
     PiwikAPI.configure({
 		host: "demo.piwik.org",
+        port: 80,
         path: "/",
 	    defaultToken: "anonymous",
     });
@@ -22,4 +23,3 @@ Ce module permet de se connecter facilement à une API Piwik. Il est conçu pour
     PiwikAPI.get({method: "SitesManager.getSiteFromId"}, {idSite: "7}, function(message) {
 	    console.log(message);
     });
-
