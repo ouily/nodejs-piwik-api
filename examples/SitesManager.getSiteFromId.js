@@ -2,7 +2,8 @@ var PiwikAPI = require("../lib/piwik-api.js");
 
 PiwikAPI.configure({
     host: "demo.piwik.org",
-    path: "/",
+    //port: "80",
+    //path: "/",
     defaultToken: "anonymous",
 });
 
