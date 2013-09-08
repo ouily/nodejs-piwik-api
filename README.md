@@ -20,6 +20,8 @@ Ce module permet de se connecter facilement à une API Piwik. Il est conçu pour
     PiwikAPI.get({method: "SitesManager.getSiteFromId"}, {idSite: "7}, function(message) {
 	    console.log(message);
     });
+    
+Corresponding URL: http://demo.piwik.org/?module=API&method=SitesManager.getSiteFromId&idSite=7&format=json&token_auth=anonymous
 
 ### Example 2 - Create a report
 
@@ -41,3 +43,5 @@ Ce module permet de se connecter facilement à une API Piwik. Il est conçu pour
     PiwikAPI.get({method: "PDFReports.addReport"}, vars, function(message) {
         console.log(message);
     });
+    
+Corresponding URL: http://demo.piwik.org/?module=API&method=PDFReports.addReport&idSite=7&description=Test&period=today&hour=0&reportType=email&reportFormat=pdf&reports[]=VisitsSummary_get&reports[]=VisitTime_getVisitInformationPerLocalTime&parameters[displayFormat]=1&parameters[emailMe]=false&parameters[evolutionGraph]=false&format=json&token_auth=anonymous
