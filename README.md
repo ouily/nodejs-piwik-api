@@ -11,12 +11,7 @@ Ce module permet de se connecter facilement à une API Piwik. Il est conçu pour
 
     var PiwikAPI = require("piwik-api");
 
-    PiwikAPI.configure({
-		host: "demo.piwik.org",
-        port: 80,
-        path: "/",
-	    defaultToken: "anonymous",
-    });
+    PiwikAPI.configure({url: "demo.piwik.org", defaultToken: "anonymous"});
     
 ## Usage
 

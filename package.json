@@ -1,7 +1,7 @@
 {
   "name": "piwik-api",
   "description": "Ce module permet de se connecter à une API Piwik",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "dependencies": {
   },
   "author": "Willy Lenormand",

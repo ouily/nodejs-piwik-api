@@ -1,10 +1,6 @@
 var PiwikAPI = require("../lib/piwik-api.js");
 
-PiwikAPI.configure({
-    host: "demo.piwik.org",
-    path: "/",
-    defaultToken: "anonymous",
-});
+PiwikAPI.configure({url: "demo.piwik.org:80"});
 
 var vars = {
 	idSite:  "7",
