@@ -15,6 +15,29 @@ Ce module permet de se connecter facilement à une API Piwik. Il est conçu pour
     
 ## Usage
 
+### Example 1 - Get site from ID
+
     PiwikAPI.get({method: "SitesManager.getSiteFromId"}, {idSite: "7}, function(message) {
 	    console.log(message);
+    });
+
+### Example 2 - Create a report
+
+    var vars = {
+        idSite:  "7",
+        description: "Test",
+        period: "today",
+        hour: "0",
+        reportType: "email",
+        reportFormat: "pdf",
+        reports: ["VisitsSummary_get", "VisitTime_getVisitInformationPerLocalTime"],
+        parameters: {
+            displayFormat: "1",
+            emailMe: false,
+            evolutionGraph: false
+        }
+    };
+    
+    PiwikAPI.get({method: "PDFReports.addReport"}, vars, function(message) {
+        console.log(message);
     });
